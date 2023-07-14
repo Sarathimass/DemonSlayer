@@ -1,0 +1,17 @@
+@use "../abstract/variables" as var;
+
+.header--title--font {
+	font-family: var.$font-secondary;
+	font-weight: bold;
+}
+.text-uppercase {
+	text-transform: uppercase;
+}
+.color-animation {
+	transition: 500ms;
+	animation: color-change 10s infinite;
+}
+
+.hidden {
+	display: none;
+}

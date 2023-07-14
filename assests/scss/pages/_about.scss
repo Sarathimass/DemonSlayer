@@ -1,0 +1,65 @@
+@use "../abstract/variables" as var;
+@use "../abstract/functions" as func;
+@use "../abstract/mixins" as mixins;
+
+.about-area {
+	padding: 8rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #2193b0;
+	background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+	background: linear-gradient(to right, #6dd5ed, #2193b0);
+	@include mixins.responsive(xs) {
+		flex-direction: column;
+		padding: 2rem 0;
+		margin-top: 5rem;
+	}
+
+	&--content {
+		color: #000;
+		@include mixins.responsive(xs) {
+			margin-right: 0;
+		}
+	}
+	&--image {
+		width: 250px;
+		height: 348.33px;
+		border-radius: 15px;
+		@include mixins.responsive(xs) {
+			margin-left: 50px;
+		}
+	}
+
+	&--title {
+		font-family: var.$font-secondary;
+		font-size: 2.8rem;
+		font-weight: bold;
+		@include mixins.responsive(xs) {
+			padding-top: 20px;
+			padding-left: 30px;
+			font-size: 25px;
+			font-family: var.$font-primary;
+			font-weight: 600;
+		}
+	}
+	&--desc {
+		font-size: 1.2rem;
+		margin-top: 2rem;
+		line-height: 1.6;
+		text-indent: 1.5rem;
+		text-align: justify;
+		margin-right: 2rem;
+		@include mixins.responsive(xs) {
+			padding-left: 30px;
+		}
+	}
+}
+.span1 {
+	font-weight: bolder;
+	font-size: 1.5rem;
+	@include mixins.responsive(xs) {
+		font-family: var.$font-secondary;
+		margin-left: 32px;
+	}
+}

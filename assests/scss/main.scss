@@ -1,0 +1,25 @@
+// abstract
+@import "./abstract/mixins";
+
+// base
+@import "./base/reset";
+@import "./base/global";
+
+// components
+@import "./components/button";
+@import "./components/forms";
+
+// layout
+@import "./layout/header";
+@import "./layout/background-elements";
+@import "./layout/footer";
+
+// animation
+@import "./utlitis/animation";
+@import "./utlitis/spacing";
+
+// pages
+@import "./pages/home";
+@import "./pages/about";
+@import "./pages/contact";
+@import "./pages/more";

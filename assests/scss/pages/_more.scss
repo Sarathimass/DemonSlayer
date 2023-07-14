@@ -1,0 +1,97 @@
+@use "../abstract/variables" as var;
+@use "../abstract/functions" as func;
+@use "../abstract/mixins" as mixins;
+
+.more {
+	padding: 3rem 5rem;
+	background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+	// background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+	@include mixins.responsive(xs) {
+		padding-left: 15px;
+		padding-right: 10px;
+	}
+	&--heading {
+		text-align: center;
+
+		h2 {
+			color: radial-gradient(
+				circle farthest-corner at 10% 20%,
+				rgba(28, 38, 47, 1) 0%,
+				rgba(37, 47, 57, 1) 90%
+			);
+			font-size: 2rem;
+		}
+
+		p {
+			font-size: 1.3rem;
+			color: radial-gradient(
+				circle farthest-corner at 10% 20%,
+				rgba(28, 38, 47, 1) 0%,
+				rgba(37, 47, 57, 1) 90%
+			);
+		}
+	}
+
+	&-cards {
+		display: flex;
+		justify-content: space-between;
+		@include mixins.responsive(xs) {
+			flex-direction: column;
+			margin-left: 40px;
+		}
+	}
+	&-card {
+		background-color: #fff;
+		max-width: 260px;
+		border-radius: 10px;
+		overflow: hidden;
+		@include mixins.responsive(xs) {
+		}
+
+		&--img {
+			width: 260px;
+		}
+		&--body {
+			padding: 2rem;
+			text-align: justify;
+
+			& > h4 {
+				font-family: var.$font-primary;
+			}
+
+			& > p {
+				text-indent: 25%;
+				font-size: 14px;
+				line-height: 1.4;
+				color: #414345;
+			}
+			& > a {
+				background-image: linear-gradient(
+					to right,
+					#232526 0%,
+					#414345 51%,
+					#232526 100%
+				);
+				margin: 10px;
+				font-size: 10px;
+				padding: 10px 20px;
+				text-align: center;
+				text-transform: uppercase;
+				transition: 0.5s;
+				background-size: 200% auto;
+				color: white;
+				box-shadow: 0 0 20px #eee;
+				border-radius: 10px;
+				display: block;
+				margin-top: 50px;
+				font-size: 10px;
+
+				&:hover {
+					background-position: right center; /* change the direction of the change here */
+					color: chartreuse;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
